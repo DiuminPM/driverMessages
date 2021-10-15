@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0293A32719D69300F739AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0293A22719D69300F739AC /* LoginViewController.swift */; };
 		1FCE9594271823CB00C8EF07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9593271823CB00C8EF07 /* AppDelegate.swift */; };
 		1FCE9596271823CB00C8EF07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9595271823CB00C8EF07 /* SceneDelegate.swift */; };
 		1FCE9598271823CB00C8EF07 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9597271823CB00C8EF07 /* AuthViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0293A22719D69300F739AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1FCE9590271823CB00C8EF07 /* driverMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = driverMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCE9593271823CB00C8EF07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCE9595271823CB00C8EF07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				1FCE9595271823CB00C8EF07 /* SceneDelegate.swift */,
 				1FCE9597271823CB00C8EF07 /* AuthViewController.swift */,
 				1FCE95B82718A9B800C8EF07 /* SignUpViewController.swift */,
+				1F0293A22719D69300F739AC /* LoginViewController.swift */,
 				1FCE95B3271864EA00C8EF07 /* Extensions */,
 				1FCE959C271823D000C8EF07 /* Assets.xcassets */,
 				1FCE959E271823D000C8EF07 /* LaunchScreen.storyboard */,
@@ -187,6 +190,7 @@
 				1FCE95B127185E9D00C8EF07 /* UIImageView + Extension.swift in Sources */,
 				1FCE95AC271858CE00C8EF07 /* UIColor + Extension.swift in Sources */,
 				1FCE9594271823CB00C8EF07 /* AppDelegate.swift in Sources */,
+				1F0293A32719D69300F739AC /* LoginViewController.swift in Sources */,
 				1FCE9596271823CB00C8EF07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
