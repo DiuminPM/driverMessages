@@ -16,7 +16,13 @@ class SignUpViewController: UIViewController {
     let alreadyLabel = UILabel(text: "Already onboard?")
     
     let signUpButton = UIButton(title: "Sign Up", titleColor: .white, backgroundColor: .buttonDark(), cornerRadius: 4)
-    let loginButton = UIButton()
+    let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Login", for: .normal)
+        button.setTitleColor(.buttonRed(), for: .normal)
+        button.titleLabel?.font = .avenir20()
+        return button
+    }()
     
     let emailTextField = OneLineTextField(font: .avenir20())
     let passwordTextField = OneLineTextField(font: .avenir20())
@@ -25,8 +31,6 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginButton.setTitle("Login", for: .normal)
-        loginButton.setTitleColor(.buttonRed(), for: .normal)
         view.backgroundColor = .white
         setupConstraints()
     }
@@ -47,10 +51,13 @@ extension SignUpViewController {
             ],
                                     axis: .vertical,
                                     spacing: 40)
-        
+        loginButton.contentHorizontalAlignment = .leading
         let bottomStackView = UIStackView(arrangedSubviews: [alreadyLabel, loginButton],
                                           axis: .horizontal,
-                                          spacing: -40)
+                                          spacing: 10)
+        
+        bottomStackView.alignment = .firstBaseline
+        
         
         helloLabel.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
