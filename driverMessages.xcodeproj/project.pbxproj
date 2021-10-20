@@ -28,6 +28,10 @@
 		1FCE95BB2718B2A500C8EF07 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE95BA2718B2A500C8EF07 /* OneLineTextField.swift */; };
 		1FD781DF271ECB5800C7C78C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD781DE271ECB5800C7C78C /* MainTabBarController.swift */; };
 		1FD781E1271ECC7000C7C78C /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD781E0271ECC7000C7C78C /* PeopleViewController.swift */; };
+		1FD781E327204D3300C7C78C /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FD781E227204D3300C7C78C /* activeChats.json */; };
+		1FD781E527204D4900C7C78C /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FD781E427204D4900C7C78C /* waitingChats.json */; };
+		1FD781E727204DCE00C7C78C /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD781E627204DCE00C7C78C /* Bundle-Decodable.swift */; };
+		1FD781EA27205C1D00C7C78C /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD781E927205C1D00C7C78C /* ActiveChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		1FCE95BA2718B2A500C8EF07 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		1FD781DE271ECB5800C7C78C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		1FD781E0271ECC7000C7C78C /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		1FD781E227204D3300C7C78C /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
+		1FD781E427204D4900C7C78C /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
+		1FD781E627204DCE00C7C78C /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		1FD781E927205C1D00C7C78C /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 		1FCE9592271823CB00C8EF07 /* driverMessages */ = {
 			isa = PBXGroup;
 			children = (
+				1FD781E827205BEB00C7C78C /* Cell */,
 				1FCE9593271823CB00C8EF07 /* AppDelegate.swift */,
 				1FCE9595271823CB00C8EF07 /* SceneDelegate.swift */,
 				1F9E2989271C977100EC0AE8 /* SignIn&Auth */,
@@ -119,6 +128,8 @@
 				1FCE95B027185E9D00C8EF07 /* UIImageView + Extension.swift */,
 				1FCE95B6271872D600C8EF07 /* UIStackView + Extension.swift */,
 				1F9E2985271B377400EC0AE8 /* UISegmentedControll + Extension.swift */,
+				1FD781E227204D3300C7C78C /* activeChats.json */,
+				1FD781E427204D4900C7C78C /* waitingChats.json */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 				1FCE95B4271869CA00C8EF07 /* ButtonFormView.swift */,
 				1FCE95BA2718B2A500C8EF07 /* OneLineTextField.swift */,
 				1F0293A6271B15E500F739AC /* AddPhotoView.swift */,
+				1FD781E627204DCE00C7C78C /* Bundle-Decodable.swift */,
 				1FCE95B2271864D800C8EF07 /* UIKit */,
 			);
 			path = Extensions;
@@ -142,6 +154,14 @@
 				1FD781E0271ECC7000C7C78C /* PeopleViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1FD781E827205BEB00C7C78C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1FD781E927205C1D00C7C78C /* ActiveChatCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +222,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FCE95A0271823D000C8EF07 /* LaunchScreen.storyboard in Resources */,
+				1FD781E327204D3300C7C78C /* activeChats.json in Resources */,
 				1FCE959D271823D000C8EF07 /* Assets.xcassets in Resources */,
+				1FD781E527204D4900C7C78C /* waitingChats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,9 +239,11 @@
 				1F9E2988271C8DD900EC0AE8 /* ListViewController.swift in Sources */,
 				1FCE95BB2718B2A500C8EF07 /* OneLineTextField.swift in Sources */,
 				1FCE95B92718A9B800C8EF07 /* SignUpViewController.swift in Sources */,
+				1FD781EA27205C1D00C7C78C /* ActiveChatCell.swift in Sources */,
 				1FCE95A82718525200C8EF07 /* UIButton + Extention.swift in Sources */,
 				1FD781E1271ECC7000C7C78C /* PeopleViewController.swift in Sources */,
 				1FCE95AA2718571600C8EF07 /* UIFont + extension.swift in Sources */,
+				1FD781E727204DCE00C7C78C /* Bundle-Decodable.swift in Sources */,
 				1F0293A5271B100F00F739AC /* SetupProfileViewController.swift in Sources */,
 				1FCE9598271823CB00C8EF07 /* AuthViewController.swift in Sources */,
 				1FCE95B7271872D600C8EF07 /* UIStackView + Extension.swift in Sources */,
