@@ -30,7 +30,7 @@ class PeopleViewController: UIViewController {
         setupSearcBar()
         setupCollectionView()
         createDataSource()
-        realoadData()
+        realoadData(with: nil)
 //        users.forEach { users in
 //            print(users.userName)
 //        }
@@ -45,7 +45,7 @@ class PeopleViewController: UIViewController {
         
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView.register(UserCell.self, forCellWithReuseIdentifier: UserCell.reuseId)
         
     }
     
@@ -61,10 +61,15 @@ class PeopleViewController: UIViewController {
         
     }
     
-    private func realoadData() {
+    private func realoadData(with searchText: String?) {
+        
+        let filtered = users.filter { users -> Bool in
+            users.contains(filter: searchText)
+        }
+        
         var snapShot = NSDiffableDataSourceSnapshot<Section, MUser>()
         snapShot.appendSections([.users])
-        snapShot.appendItems(users, toSection: .users)
+        snapShot.appendItems(filtered, toSection: .users)
         dataSource?.apply(snapShot, animatingDifferences: true)
     }
 }
@@ -125,9 +130,10 @@ extension PeopleViewController {
             switch section {
             
             case .users:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: IndexPath)
-                cell.backgroundColor = .systemPink
-                return cell
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: IndexPath)
+//                cell.backgroundColor = .systemPink
+//                return cell
+                return self.configure(collectionView: collectionView, cellType: UserCell.self, with: users, for: IndexPath)
             }
         })
         
@@ -148,7 +154,8 @@ extension PeopleViewController {
 //MARK: - UISearchBarDelegate
 extension PeopleViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+realoadData(with: searchText)
+        
     }
 }
 

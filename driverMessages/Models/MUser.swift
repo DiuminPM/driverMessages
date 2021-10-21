@@ -20,4 +20,11 @@ struct MUser: Hashable, Decodable {
         return lhs.id == rhs.id
     }
     
+    func contains(filter: String?) -> Bool {
+        guard let filter = filter else { return true }
+        if filter.isEmpty { return true }
+        let lowercasedFilter = filter.lowercased()
+        return userName.lowercased().contains(lowercasedFilter)
+    }
+    
 }
