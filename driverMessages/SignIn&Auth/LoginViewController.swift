@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol AuthNavigatingDelegate: class {
+    func toLoginVC()
+    func toSignUpVC()
+}
+
 class LoginViewController: UIViewController {
     
     let helloLabel = UILabel(text: "Welcome Back!", font: .avenir26())
@@ -26,6 +31,8 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigatingDelegate?
+    
     let emailTF = OneLineTextField(font: .avenir20())
     let passwordTF = OneLineTextField(font: .avenir20())
 
@@ -35,7 +42,32 @@ class LoginViewController: UIViewController {
         setupConstraints()
         view.backgroundColor = .white
         googleButton.customaizedGoogleButon()
+        
+        loginButton.addTarget(self, action: #selector(loginButtonTaped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTaped), for: .touchUpInside)
+
     }
+    
+    @objc private func loginButtonTaped() {
+        print(#function)
+        AuthService.shared.login(email: emailTF.text, password: passwordTF.text) { result in
+            switch result{
+            
+            case .success(let user):
+                self.showAlert(with: "Успешно!", and: "Вы авторизованы")
+                print(user.email)
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        }
+    }
+    
+    @objc private func signUpButtonTaped() {
+        dismiss(animated: true) {
+            self.delegate?.toSignUpVC()
+        }
+    }
+    
 }
 
 // MARK: - Setup constants
@@ -69,13 +101,13 @@ extension LoginViewController {
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: helloLabel.bottomAnchor, constant: 40),
+            stackView.topAnchor.constraint(equalTo: helloLabel.bottomAnchor, constant: 30),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
         
         NSLayoutConstraint.activate([
-            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 40),
+            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 30),
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])

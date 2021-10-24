@@ -53,7 +53,7 @@ extension SetupProfileViewController {
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            helloLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            helloLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
             helloLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         

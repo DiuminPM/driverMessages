@@ -24,6 +24,8 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigatingDelegate?
+    
     let emailTextField = OneLineTextField(font: .avenir20())
     let passwordTextField = OneLineTextField(font: .avenir20())
     let confirmPasswordTextField = OneLineTextField(font: .avenir20())
@@ -33,7 +35,35 @@ class SignUpViewController: UIViewController {
         
         view.backgroundColor = .white
         setupConstraints()
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonTaped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTaped), for: .touchUpInside)
+
     }
+    
+    @objc private func signUpButtonTaped() {
+        print(#function)
+        AuthService.shared.register(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text) { result in
+            switch result {
+            
+            case .success(let user):
+                self.showAlert(with: "Успешно!", and: "Вы зарегистрированы") {
+                    self.present(SetupProfileViewController(), animated: true, completion: nil)
+                }
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        }
+    }
+    
+    @objc private func loginButtonTaped() {
+    
+        dismiss(animated: true) {
+            self.delegate?.toLoginVC()
+        }
+        
+    }
+    
 }
 // MARK: - Setup Constrait
 extension SignUpViewController {
@@ -68,7 +98,7 @@ extension SignUpViewController {
         view.addSubview(bottomStackView)
         
         NSLayoutConstraint.activate([
-            helloLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            helloLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             helloLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         
         ])

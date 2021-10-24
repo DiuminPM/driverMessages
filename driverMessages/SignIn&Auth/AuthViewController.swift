@@ -20,6 +20,9 @@ class AuthViewController: UIViewController {
     let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadow: true)
     let emailButton = UIButton(title: "Email", titleColor: .white, backgroundColor: .buttonDark())
     let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .white, isShadow: true)
+    
+    let signUpVC = SignUpViewController()
+    let loginVC = LoginViewController()
 
 
     override func viewDidLoad() {
@@ -27,10 +30,25 @@ class AuthViewController: UIViewController {
         view.backgroundColor = .white
         setupConstraints()
         googleButton.customaizedGoogleButon()
+        
+        emailButton.addTarget(self, action: #selector(emailButtonTaped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTaped), for: .touchUpInside)
+        
+        signUpVC.delegate = self
+        loginVC.delegate = self
+
 
     }
     
+    @objc private func emailButtonTaped() {
+        print(#function)
+        present(signUpVC, animated: true, completion: nil)
+    }
     
+    @objc private func loginButtonTaped() {
+        print(#function)
+        present(loginVC, animated: true, completion: nil)
+    }
 
 }
 
@@ -57,12 +75,25 @@ extension AuthViewController {
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 40),
+            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 20),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
 
     }
+}
+
+extension AuthViewController: AuthNavigatingDelegate {
+    func toLoginVC() {
+        present(loginVC, animated: true, completion: nil)
+    }
+    
+    func toSignUpVC() {
+        present(signUpVC , animated: true, completion: nil)
+
+    }
+    
+    
 }
 
 // MARK: - SwiftUI
