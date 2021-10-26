@@ -48,7 +48,7 @@ class SignUpViewController: UIViewController {
             
             case .success(let user):
                 self.showAlert(with: "Успешно!", and: "Вы зарегистрированы") {
-                    self.present(SetupProfileViewController(), animated: true, completion: nil)
+                    self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
                 }
             case .failure(let error):
                 self.showAlert(with: "Ошибка!", and: error.localizedDescription)

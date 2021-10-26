@@ -13,6 +13,7 @@
 		1F9D57D1272569780063B557 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D0272569780063B557 /* AuthService.swift */; };
 		1F9D57D327257A8A0063B557 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D227257A8A0063B557 /* Validators.swift */; };
 		1F9D57D5272581FE0063B557 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D4272581FE0063B557 /* AuthError.swift */; };
+		1F9D57D82725A0550063B557 /* AuthNavigatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D72725A0550063B557 /* AuthNavigatingDelegate.swift */; };
 		1F9E2986271B377400EC0AE8 /* UISegmentedControll + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E2985271B377400EC0AE8 /* UISegmentedControll + Extension.swift */; };
 		1F9E2988271C8DD900EC0AE8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E2987271C8DD900EC0AE8 /* ListViewController.swift */; };
 		1FCE9594271823CB00C8EF07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9593271823CB00C8EF07 /* AppDelegate.swift */; };
@@ -49,6 +50,8 @@
 		1FD782092722FD9C00C7C78C /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD782082722FD9C00C7C78C /* UIView + Extensions.swift */; };
 		1FD7820B27230E1300C7C78C /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7820A27230E1300C7C78C /* ChatRequestViewController.swift */; };
 		1FD7820D272467DE00C7C78C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FD7820C272467DE00C7C78C /* GoogleService-Info.plist */; };
+		1FFE5DF82726F162009E6C9F /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DF72726F162009E6C9F /* FireStoreService.swift */; };
+		1FFE5DFA2726F46E009E6C9F /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DF92726F46E009E6C9F /* UserError.swift */; };
 		B67125963EE5B8E4E925B95D /* Pods_driverMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C84F448F0515280440FAB /* Pods_driverMessages.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,7 @@
 		1F9D57D0272569780063B557 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1F9D57D227257A8A0063B557 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		1F9D57D4272581FE0063B557 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		1F9D57D72725A0550063B557 /* AuthNavigatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigatingDelegate.swift; sourceTree = "<group>"; };
 		1F9E2985271B377400EC0AE8 /* UISegmentedControll + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControll + Extension.swift"; sourceTree = "<group>"; };
 		1F9E2987271C8DD900EC0AE8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1FCE9590271823CB00C8EF07 /* driverMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = driverMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,8 @@
 		1FD782082722FD9C00C7C78C /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		1FD7820A27230E1300C7C78C /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		1FD7820C272467DE00C7C78C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FFE5DF72726F162009E6C9F /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
+		1FFE5DF92726F46E009E6C9F /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		74D722627E16077FEE6314D5 /* Pods-driverMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.release.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.release.xcconfig"; sourceTree = "<group>"; };
 		AF122DB51FAEE0BE4E2F9D96 /* Pods-driverMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.debug.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.debug.xcconfig"; sourceTree = "<group>"; };
 		E37C84F448F0515280440FAB /* Pods_driverMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_driverMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +125,7 @@
 			children = (
 				1FD781FD27219BC700C7C78C /* Models */,
 				1F9D57D0272569780063B557 /* AuthService.swift */,
+				1FFE5DF72726F162009E6C9F /* FireStoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 			children = (
 				1F9D57D227257A8A0063B557 /* Validators.swift */,
 				1F9D57D4272581FE0063B557 /* AuthError.swift */,
+				1FFE5DF92726F46E009E6C9F /* UserError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				1FD781F027207E8600C7C78C /* SelfConfiguringCell.swift */,
+				1F9D57D72725A0550063B557 /* AuthNavigatingDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -419,10 +428,13 @@
 				1FD781FC27219AD600C7C78C /* MUser.swift in Sources */,
 				1FCE95B7271872D600C8EF07 /* UIStackView + Extension.swift in Sources */,
 				1F0293A7271B15E500F739AC /* AddPhotoView.swift in Sources */,
+				1FFE5DFA2726F46E009E6C9F /* UserError.swift in Sources */,
 				1FCE95B5271869CA00C8EF07 /* ButtonFormView.swift in Sources */,
 				1FCE95AE27185C4100C8EF07 /* UILabel + Extension.swift in Sources */,
+				1FFE5DF82726F162009E6C9F /* FireStoreService.swift in Sources */,
 				1FCE95B127185E9D00C8EF07 /* UIImageView + Extension.swift in Sources */,
 				1FD781F127207E8600C7C78C /* SelfConfiguringCell.swift in Sources */,
+				1F9D57D82725A0550063B557 /* AuthNavigatingDelegate.swift in Sources */,
 				1FD782012721B99200C7C78C /* UIViewController + Extension.swift in Sources */,
 				1FD781EE27207BD200C7C78C /* WaitingChatCell.swift in Sources */,
 				1FCE95AC271858CE00C8EF07 /* UIColor + Extension.swift in Sources */,
