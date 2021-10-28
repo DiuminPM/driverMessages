@@ -54,8 +54,11 @@ class LoginViewController: UIViewController {
                 self.showAlert(with: "Успешно!", and: "Вы авторизованы") {
                     FireStoreService.shared.getUserData(user: user) { (result) in
                         switch result {
-                        case .success(let muser):
-                            self.present(MainTabBarController(), animated: true, completion: nil)
+                        case .success(let mUser):
+                            let mainTabBar = MainTabBarController(currentUser: mUser)
+                            mainTabBar.modalPresentationStyle = .fullScreen
+                            self.present(mainTabBar, animated: true, completion: nil)
+                            self.present(MainTabBarController(currentUser: mUser), animated: true, completion: nil)
                         case .failure(_):
                             self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
                         }
