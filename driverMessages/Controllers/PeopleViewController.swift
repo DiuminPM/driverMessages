@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class PeopleViewController: UIViewController {
     
-    let users = Bundle.main.decode([MUser].self, from: "users.json")
-    var collectionView : UICollectionView! = nil
-    var dataSource: UICollectionViewDiffableDataSource<Section, MUser>?
+    let users = [MUser]()
+    var collectionView : UICollectionView!
+    var dataSource: UICollectionViewDiffableDataSource<Section, MUser>!
     
     enum Section: Int, CaseIterable {
         case users
@@ -31,10 +32,22 @@ class PeopleViewController: UIViewController {
         setupCollectionView()
         createDataSource()
         realoadData(with: nil)
-//        users.forEach { users in
-//            print(users.userName)
-//        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOut))
+    }
     
+    @objc private func signOut() {
+        let ac = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        ac.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { (_) in
+            do {
+                try Auth.auth().signOut()
+                UIApplication.shared.keyWindow?.rootViewController = AuthViewController()
+            } catch {
+                print("Error signing out: \(error.localizedDescription)")
+            }
+        }))
+        present(ac, animated: true, completion: nil)
     }
     
     private func setupCollectionView() {

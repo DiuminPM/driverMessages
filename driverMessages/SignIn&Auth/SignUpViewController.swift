@@ -43,9 +43,10 @@ class SignUpViewController: UIViewController {
     
     @objc private func signUpButtonTaped() {
         print(#function)
-        AuthService.shared.register(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text) { result in
+        AuthService.shared.register(email: emailTextField.text,
+                                    password: passwordTextField.text,
+                                    confirmPassword: confirmPasswordTextField.text) { result in
             switch result {
-            
             case .success(let user):
                 self.showAlert(with: "Успешно!", and: "Вы зарегистрированы") {
                     self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)

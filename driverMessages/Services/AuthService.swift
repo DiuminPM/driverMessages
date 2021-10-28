@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class AuthService {
     
@@ -20,7 +21,7 @@ class AuthService {
             return
         }
         
-        auth.signIn(withEmail: email, password: password ) { result, error in
+        auth.signIn(withEmail: email, password: password ) { (result, error) in
             guard let result = result else {
                 completion(.failure(error!))
                 return

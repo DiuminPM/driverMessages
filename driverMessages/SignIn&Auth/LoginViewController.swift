@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 
 class LoginViewController: UIViewController {
@@ -51,8 +51,16 @@ class LoginViewController: UIViewController {
             switch result{
             
             case .success(let user):
-                self.showAlert(with: "Успешно!", and: "Вы авторизованы")
-                print(user.email)
+                self.showAlert(with: "Успешно!", and: "Вы авторизованы") {
+                    FireStoreService.shared.getUserData(user: user) { (result) in
+                        switch result {
+                        case .success(let muser):
+                            self.present(MainTabBarController(), animated: true, completion: nil)
+                        case .failure(_):
+                            self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                        }
+                    }
+                }
             case .failure(let error):
                 self.showAlert(with: "Ошибка!", and: error.localizedDescription)
             }
