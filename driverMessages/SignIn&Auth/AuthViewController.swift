@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 class AuthViewController: UIViewController {
     
@@ -33,12 +35,15 @@ class AuthViewController: UIViewController {
         
         emailButton.addTarget(self, action: #selector(emailButtonTaped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTaped), for: .touchUpInside)
+        googleButton.addTarget(self, action: #selector(googleButtonTaped), for: .touchUpInside)
+
         
         signUpVC.delegate = self
         loginVC.delegate = self
 
-
+//        GIDSignIn.sharedInstance()?.delegate = self
     }
+    
     
     @objc private func emailButtonTaped() {
         print(#function)
@@ -48,6 +53,11 @@ class AuthViewController: UIViewController {
     @objc private func loginButtonTaped() {
         print(#function)
         present(loginVC, animated: true, completion: nil)
+    }
+    
+    @objc private func googleButtonTaped() {
+        print(#function)
+        AuthService.shared.googleLogIn(present: self)
     }
 
 }
@@ -92,8 +102,44 @@ extension AuthViewController: AuthNavigatingDelegate {
         present(signUpVC , animated: true, completion: nil)
 
     }
-    
-    
+}
+
+extension AuthViewController {
+
+    func googleSign() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
+            if let error = error {
+                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
+            guard
+                let authentication = user?.authentication,
+                let idToken = authentication.idToken
+            else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+            Auth.auth().signIn(with: credential) { (result, error) in
+                guard let result = result else { return }
+                let user = result.user
+                FireStoreService.shared.getUserData(user: user) { result in
+                    switch result {
+                    
+                    case .success(let mUser):
+                        UIApplication.getTopViewController()?.showAlert(with: "Успешно", and: "Вы авторизованы") {
+                            let mainTabBar = MainTabBarController(currentUser: mUser)
+                            mainTabBar.modalPresentationStyle = .fullScreen
+                            UIApplication.getTopViewController()?.present(mainTabBar, animated: true, completion: nil)
+                        }
+                    case .failure(_):
+                        UIApplication.getTopViewController()?.showAlert(with: "Успешно", and: "Вы зарегистрированны") {
+                            UIApplication.getTopViewController()?.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 }
 
 // MARK: - SwiftUI

@@ -42,6 +42,8 @@ class LoginViewController: UIViewController {
         
         loginButton.addTarget(self, action: #selector(loginButtonTaped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTaped), for: .touchUpInside)
+        googleButton.addTarget(self, action: #selector(googleButtonTaped), for: .touchUpInside)
+
 
     }
     
@@ -74,6 +76,11 @@ class LoginViewController: UIViewController {
         dismiss(animated: true) {
             self.delegate?.toSignUpVC()
         }
+    }
+    
+    @objc private func googleButtonTaped() {
+        print(#function)
+        AuthService.shared.googleLogIn(present: self)
     }
     
 }

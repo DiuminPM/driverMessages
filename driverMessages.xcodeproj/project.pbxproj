@@ -52,13 +52,15 @@
 		1FD7820D272467DE00C7C78C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FD7820C272467DE00C7C78C /* GoogleService-Info.plist */; };
 		1FFE5DF82726F162009E6C9F /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DF72726F162009E6C9F /* FireStoreService.swift */; };
 		1FFE5DFA2726F46E009E6C9F /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DF92726F46E009E6C9F /* UserError.swift */; };
-		B67125963EE5B8E4E925B95D /* Pods_driverMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C84F448F0515280440FAB /* Pods_driverMessages.framework */; };
+		1FFE5DFC272C5C63009E6C9F /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DFB272C5C63009E6C9F /* UIApplication + Extension.swift */; };
+		8172263035FE2540AC0E3DF8 /* Pods_driverMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6059CC09C17CDF2F37E48217 /* Pods_driverMessages.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F0293A22719D69300F739AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F0293A4271B100F00F739AC /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		1F0293A6271B15E500F739AC /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		1F78C912A0EEC4ADE8AF5016 /* Pods-driverMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.release.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.release.xcconfig"; sourceTree = "<group>"; };
 		1F9D57D0272569780063B557 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1F9D57D227257A8A0063B557 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		1F9D57D4272581FE0063B557 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -103,9 +105,9 @@
 		1FD7820C272467DE00C7C78C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FFE5DF72726F162009E6C9F /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
 		1FFE5DF92726F46E009E6C9F /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
-		74D722627E16077FEE6314D5 /* Pods-driverMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.release.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.release.xcconfig"; sourceTree = "<group>"; };
-		AF122DB51FAEE0BE4E2F9D96 /* Pods-driverMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.debug.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.debug.xcconfig"; sourceTree = "<group>"; };
-		E37C84F448F0515280440FAB /* Pods_driverMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_driverMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFE5DFB272C5C63009E6C9F /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		6059CC09C17CDF2F37E48217 /* Pods_driverMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_driverMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5BE0A4ADE946BC713829050 /* Pods-driverMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.debug.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67125963EE5B8E4E925B95D /* Pods_driverMessages.framework in Frameworks */,
+				8172263035FE2540AC0E3DF8 /* Pods_driverMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +159,7 @@
 				1FCE9592271823CB00C8EF07 /* driverMessages */,
 				1FCE9591271823CB00C8EF07 /* Products */,
 				BB5851264FAB80BEA0D9CD14 /* Pods */,
-				C0BD02072677FA3706B7844B /* Frameworks */,
+				F8344837A5FA305BDCFC0395 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				1FD782002721B99200C7C78C /* UIViewController + Extension.swift */,
+				1FFE5DFB272C5C63009E6C9F /* UIApplication + Extension.swift */,
 				1FCE95A72718525200C8EF07 /* UIButton + Extention.swift */,
 				1FCE95A92718571600C8EF07 /* UIFont + extension.swift */,
 				1FCE95AB271858CE00C8EF07 /* UIColor + Extension.swift */,
@@ -274,16 +277,16 @@
 		BB5851264FAB80BEA0D9CD14 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AF122DB51FAEE0BE4E2F9D96 /* Pods-driverMessages.debug.xcconfig */,
-				74D722627E16077FEE6314D5 /* Pods-driverMessages.release.xcconfig */,
+				C5BE0A4ADE946BC713829050 /* Pods-driverMessages.debug.xcconfig */,
+				1F78C912A0EEC4ADE8AF5016 /* Pods-driverMessages.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C0BD02072677FA3706B7844B /* Frameworks */ = {
+		F8344837A5FA305BDCFC0395 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E37C84F448F0515280440FAB /* Pods_driverMessages.framework */,
+				6059CC09C17CDF2F37E48217 /* Pods_driverMessages.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -295,11 +298,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FCE95A4271823D000C8EF07 /* Build configuration list for PBXNativeTarget "driverMessages" */;
 			buildPhases = (
-				07418677AA6CF5BC99AFA3BA /* [CP] Check Pods Manifest.lock */,
+				E8CC00208DE0EDF891B13B37 /* [CP] Check Pods Manifest.lock */,
 				1FCE958C271823CB00C8EF07 /* Sources */,
 				1FCE958D271823CB00C8EF07 /* Frameworks */,
 				1FCE958E271823CB00C8EF07 /* Resources */,
-				2D6DA13761B0C1DB7EDA80AC /* [CP] Embed Pods Frameworks */,
+				4FA884DBAF1080A822FCE5F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,7 +362,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07418677AA6CF5BC99AFA3BA /* [CP] Check Pods Manifest.lock */ = {
+		4FA884DBAF1080A822FCE5F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-driverMessages/Pods-driverMessages-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-driverMessages/Pods-driverMessages-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-driverMessages/Pods-driverMessages-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8CC00208DE0EDF891B13B37 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,23 +401,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D6DA13761B0C1DB7EDA80AC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-driverMessages/Pods-driverMessages-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-driverMessages/Pods-driverMessages-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-driverMessages/Pods-driverMessages-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -409,6 +412,7 @@
 				1F9E2988271C8DD900EC0AE8 /* ListViewController.swift in Sources */,
 				1FD781F327209D1F00C7C78C /* SectionHeader.swift in Sources */,
 				1FD781EC2720771200C7C78C /* GradientView.swift in Sources */,
+				1FFE5DFC272C5C63009E6C9F /* UIApplication + Extension.swift in Sources */,
 				1FCE95BB2718B2A500C8EF07 /* OneLineTextField.swift in Sources */,
 				1FCE95B92718A9B800C8EF07 /* SignUpViewController.swift in Sources */,
 				1F9D57D5272581FE0063B557 /* AuthError.swift in Sources */,
@@ -512,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -567,7 +571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -579,7 +583,7 @@
 		};
 		1FCE95A5271823D000C8EF07 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF122DB51FAEE0BE4E2F9D96 /* Pods-driverMessages.debug.xcconfig */;
+			baseConfigurationReference = C5BE0A4ADE946BC713829050 /* Pods-driverMessages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -600,7 +604,7 @@
 		};
 		1FCE95A6271823D000C8EF07 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74D722627E16077FEE6314D5 /* Pods-driverMessages.release.xcconfig */;
+			baseConfigurationReference = 1F78C912A0EEC4ADE8AF5016 /* Pods-driverMessages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

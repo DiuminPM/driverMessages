@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
 class AuthService {
     
@@ -27,6 +28,42 @@ class AuthService {
                 return
             }
             completion(.success(result.user))
+        }
+    }
+    
+    func googleLogIn(present: UIViewController) {
+        
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: present) { [unowned self] user, error in
+            if let error = error {
+                present.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
+            guard
+                let authentication = user?.authentication,
+                let idToken = authentication.idToken
+            else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+            Auth.auth().signIn(with: credential) { (result, error) in
+                guard let result = result else { return }
+                let user = result.user
+                FireStoreService.shared.getUserData(user: user) { result in
+                    switch result {
+                    
+                    case .success(let mUser):
+                        UIApplication.getTopViewController()?.showAlert(with: "Успешно", and: "Вы авторизованы") {
+                            let mainTabBar = MainTabBarController(currentUser: mUser)
+                            mainTabBar.modalPresentationStyle = .fullScreen
+                            UIApplication.getTopViewController()?.present(mainTabBar, animated: true, completion: nil)
+                        }
+                    case .failure(_):
+                        UIApplication.getTopViewController()?.showAlert(with: "Успешно", and: "Вы зарегистрированны") {
+                            UIApplication.getTopViewController()?.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
+
         }
     }
     
