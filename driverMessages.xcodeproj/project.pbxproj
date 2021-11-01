@@ -53,6 +53,8 @@
 		1FFE5DF82726F162009E6C9F /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DF72726F162009E6C9F /* FireStoreService.swift */; };
 		1FFE5DFA2726F46E009E6C9F /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DF92726F46E009E6C9F /* UserError.swift */; };
 		1FFE5DFC272C5C63009E6C9F /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DFB272C5C63009E6C9F /* UIApplication + Extension.swift */; };
+		1FFE5DFE27303997009E6C9F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DFD27303997009E6C9F /* StorageService.swift */; };
+		1FFE5E0027303EFF009E6C9F /* UIImage + extrnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DFF27303EFF009E6C9F /* UIImage + extrnsion.swift */; };
 		8172263035FE2540AC0E3DF8 /* Pods_driverMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6059CC09C17CDF2F37E48217 /* Pods_driverMessages.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +108,8 @@
 		1FFE5DF72726F162009E6C9F /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
 		1FFE5DF92726F46E009E6C9F /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		1FFE5DFB272C5C63009E6C9F /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		1FFE5DFD27303997009E6C9F /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		1FFE5DFF27303EFF009E6C9F /* UIImage + extrnsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + extrnsion.swift"; sourceTree = "<group>"; };
 		6059CC09C17CDF2F37E48217 /* Pods_driverMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_driverMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BE0A4ADE946BC713829050 /* Pods-driverMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.debug.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +132,7 @@
 				1FD781FD27219BC700C7C78C /* Models */,
 				1F9D57D0272569780063B557 /* AuthService.swift */,
 				1FFE5DF72726F162009E6C9F /* FireStoreService.swift */,
+				1FFE5DFD27303997009E6C9F /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				1FD781F427217C0700C7C78C /* users.json */,
 				1FD781E227204D3300C7C78C /* activeChats.json */,
 				1FD781E427204D4900C7C78C /* waitingChats.json */,
+				1FFE5DFF27303EFF009E6C9F /* UIImage + extrnsion.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 				1FCE95AA2718571600C8EF07 /* UIFont + extension.swift in Sources */,
 				1FD781E727204DCE00C7C78C /* Bundle-Decodable.swift in Sources */,
 				1FD782032722DE9600C7C78C /* ProfileViewController.swift in Sources */,
+				1FFE5E0027303EFF009E6C9F /* UIImage + extrnsion.swift in Sources */,
 				1FD7820B27230E1300C7C78C /* ChatRequestViewController.swift in Sources */,
 				1F0293A5271B100F00F739AC /* SetupProfileViewController.swift in Sources */,
 				1FCE9598271823CB00C8EF07 /* AuthViewController.swift in Sources */,
@@ -436,6 +443,7 @@
 				1FCE95B5271869CA00C8EF07 /* ButtonFormView.swift in Sources */,
 				1FCE95AE27185C4100C8EF07 /* UILabel + Extension.swift in Sources */,
 				1FFE5DF82726F162009E6C9F /* FireStoreService.swift in Sources */,
+				1FFE5DFE27303997009E6C9F /* StorageService.swift in Sources */,
 				1FCE95B127185E9D00C8EF07 /* UIImageView + Extension.swift in Sources */,
 				1FD781F127207E8600C7C78C /* SelfConfiguringCell.swift in Sources */,
 				1F9D57D82725A0550063B557 /* AuthNavigatingDelegate.swift in Sources */,
