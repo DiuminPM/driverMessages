@@ -16,6 +16,8 @@
 		1F9D57D82725A0550063B557 /* AuthNavigatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D72725A0550063B557 /* AuthNavigatingDelegate.swift */; };
 		1F9E2986271B377400EC0AE8 /* UISegmentedControll + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E2985271B377400EC0AE8 /* UISegmentedControll + Extension.swift */; };
 		1F9E2988271C8DD900EC0AE8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E2987271C8DD900EC0AE8 /* ListViewController.swift */; };
+		1FB504852731399B00716250 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB504842731399B00716250 /* ListenerService.swift */; };
+		1FB5048727318BA400716250 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5048627318BA400716250 /* MMessage.swift */; };
 		1FCE9594271823CB00C8EF07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9593271823CB00C8EF07 /* AppDelegate.swift */; };
 		1FCE9596271823CB00C8EF07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9595271823CB00C8EF07 /* SceneDelegate.swift */; };
 		1FCE9598271823CB00C8EF07 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9597271823CB00C8EF07 /* AuthViewController.swift */; };
@@ -69,6 +71,8 @@
 		1F9D57D72725A0550063B557 /* AuthNavigatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigatingDelegate.swift; sourceTree = "<group>"; };
 		1F9E2985271B377400EC0AE8 /* UISegmentedControll + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControll + Extension.swift"; sourceTree = "<group>"; };
 		1F9E2987271C8DD900EC0AE8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		1FB504842731399B00716250 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
+		1FB5048627318BA400716250 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
 		1FCE9590271823CB00C8EF07 /* driverMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = driverMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCE9593271823CB00C8EF07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCE9595271823CB00C8EF07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				1F9D57D0272569780063B557 /* AuthService.swift */,
 				1FFE5DF72726F162009E6C9F /* FireStoreService.swift */,
 				1FFE5DFD27303997009E6C9F /* StorageService.swift */,
+				1FB504842731399B00716250 /* ListenerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			children = (
 				1FD781F927219A9800C7C78C /* MChat.swift */,
 				1FD781FB27219AD600C7C78C /* MUser.swift */,
+				1FB5048627318BA400716250 /* MMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				1FFE5E0027303EFF009E6C9F /* UIImage + extrnsion.swift in Sources */,
 				1FD7820B27230E1300C7C78C /* ChatRequestViewController.swift in Sources */,
 				1F0293A5271B100F00F739AC /* SetupProfileViewController.swift in Sources */,
+				1FB504852731399B00716250 /* ListenerService.swift in Sources */,
 				1FCE9598271823CB00C8EF07 /* AuthViewController.swift in Sources */,
 				1FD781FC27219AD600C7C78C /* MUser.swift in Sources */,
 				1FCE95B7271872D600C8EF07 /* UIStackView + Extension.swift in Sources */,
@@ -452,6 +459,7 @@
 				1FCE95AC271858CE00C8EF07 /* UIColor + Extension.swift in Sources */,
 				1FCE9594271823CB00C8EF07 /* AppDelegate.swift in Sources */,
 				1F0293A32719D69300F739AC /* LoginViewController.swift in Sources */,
+				1FB5048727318BA400716250 /* MMessage.swift in Sources */,
 				1FD781FA27219A9800C7C78C /* MChat.swift in Sources */,
 				1F9D57D1272569780063B557 /* AuthService.swift in Sources */,
 				1FCE9596271823CB00C8EF07 /* SceneDelegate.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class UserCell: UICollectionViewCell, SelfConfiguringCell {
     
@@ -36,7 +37,10 @@ class UserCell: UICollectionViewCell, SelfConfiguringCell {
         self.layer.shadowRadius = 3
         self.layer.shadowOpacity = 0.5
         self.layer.shadowOffset = CGSize(width: 0, height: 4)
-
+    }
+    
+    override func prepareForReuse() {
+        userImageView.image = nil
     }
     
     private func setupConstraints() {
@@ -73,8 +77,9 @@ class UserCell: UICollectionViewCell, SelfConfiguringCell {
     
     func configure<U>(with value: U) where U : Hashable {
         guard let user: MUser = value as? MUser else { return }
-        userImageView.image = UIImage(named: user.avatarStringURL)
         userName.text = user.userName
+        guard let url = URL(string: user.avatarStringURL) else { return }
+        userImageView.sd_setImage(with: url, completed: nil)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
