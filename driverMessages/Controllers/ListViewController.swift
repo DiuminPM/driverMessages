@@ -11,9 +11,11 @@ import Firebase
 class ListViewController: UIViewController {
     
     var waitingChats = [MChat]()
-    let activeChats = [MChat]()
+    var activeChats = [MChat]()
     
     private var waitingChatListener: ListenerRegistration?
+    private var activeChatListener: ListenerRegistration?
+
     
     enum Section: Int, CaseIterable {
         case waitingChat, activeChats
@@ -46,6 +48,7 @@ class ListViewController: UIViewController {
     
     deinit {
         waitingChatListener?.remove()
+        activeChatListener?.remove()
     }
     
     override func viewDidLoad() {
@@ -69,6 +72,17 @@ class ListViewController: UIViewController {
                 self.realoadData()
             case .failure(let error):
                 self.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
+        })
+        
+        activeChatListener = ListenerService.shared.activeChatsObserve(chats: activeChats, completion: { result in
+            switch result {
+            case .success(let chats):
+                self.activeChats = chats
+                self.realoadData()
+            case .failure(let error):
+                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+
             }
         })
     }
@@ -239,6 +253,16 @@ extension ListViewController: WaitingChatsNavigation {
     
     func chatToActive(chat: MChat) {
         print(#function)
+        FireStoreService.shared.changeToActive(chat: chat) { result in
+            switch result {
+            
+            case .success:
+                self.showAlert(with: "Успешно!", and: "Приятного общения с \(chat.friendUserName).")
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+
+            }
+        }
     }
     
     

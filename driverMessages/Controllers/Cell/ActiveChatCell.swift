@@ -10,9 +10,9 @@ import UIKit
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     func configure<U>(with value: U) where U : Hashable {
         guard let chat: MChat = value as? MChat else { return }
-//        friendImageView.image = UIImage(named: chat.userImageString)
-//        friendName.text = chat.userName
-//        lastMessage.text = chat.lastMessage
+        friendImageView.sd_setImage(with: URL(string: chat.friendAvatarStringURL), completed: nil)
+        friendName.text = chat.friendUserName
+        lastMessage.text = chat.lastMessageContent
     }
     
     
