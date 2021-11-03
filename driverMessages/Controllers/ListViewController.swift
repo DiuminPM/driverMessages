@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class ListViewController: UIViewController {
     
-    let waitingChats = [MChat]()
+    var waitingChats = [MChat]()
     let activeChats = [MChat]()
+    
+    private var waitingChatListener: ListenerRegistration?
     
     enum Section: Int, CaseIterable {
         case waitingChat, activeChats
@@ -41,12 +44,33 @@ class ListViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        waitingChatListener?.remove()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         setupSearcBar()
         createDataSource()
         realoadData()
+        
+        waitingChatListener = ListenerService.shared.waitingChatsObserve(chats: waitingChats, completion: { result in
+            switch result {
+            
+            case .success(let chats):
+                if self.waitingChats != [], self.waitingChats.count <= chats.count {
+                    let chatRequestVC = ChatRequestViewController(chat: chats.last!)
+                    chatRequestVC.delegate = self
+                    self.present(chatRequestVC, animated: true, completion: nil)
+                }
+                self.waitingChats = chats
+                print(" arraycount\(chats.count)")
+                self.realoadData()
+            case .failure(let error):
+                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
+        })
     }
     
     private func setupSearcBar() {
@@ -74,7 +98,7 @@ extension ListViewController {
         
         collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseId)
         collectionView.register(WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseId)
-        
+        collectionView.delegate = self
     }
     
     private func realoadData() {
@@ -182,6 +206,43 @@ extension ListViewController {
     }
 }
 
+//MARK: - UICollectionViewDelegate
+extension ListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let chat = self.dataSource?.itemIdentifier(for: indexPath) else { return }
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        
+        switch section {
+        
+        case .waitingChat:
+            let chatRequestVC = ChatRequestViewController(chat: chat)
+            chatRequestVC.delegate = self
+            self.present(chatRequestVC, animated: true, completion: nil)
+        case .activeChats:
+            print(indexPath)
+        }
+    }
+}
+
+extension ListViewController: WaitingChatsNavigation {
+    func removeWaitingChat(chat: MChat) {
+        FireStoreService.shared.deleteWaitingChat(chat: chat) { result in
+            switch result {
+            
+            case .success:
+                self.showAlert(with: "Успешно!", and: "Чат с \(chat.friendUserName) был удален")
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        }
+    }
+    
+    func chatToActive(chat: MChat) {
+        print(#function)
+    }
+    
+    
+}
 
 //MARK: - UISearchBarDelegate
 extension ListViewController: UISearchBarDelegate {

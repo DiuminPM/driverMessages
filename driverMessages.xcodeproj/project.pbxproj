@@ -18,6 +18,7 @@
 		1F9E2988271C8DD900EC0AE8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E2987271C8DD900EC0AE8 /* ListViewController.swift */; };
 		1FB504852731399B00716250 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB504842731399B00716250 /* ListenerService.swift */; };
 		1FB5048727318BA400716250 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5048627318BA400716250 /* MMessage.swift */; };
+		1FB504892732C69900716250 /* WaitingChatsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB504882732C69900716250 /* WaitingChatsNavigation.swift */; };
 		1FCE9594271823CB00C8EF07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9593271823CB00C8EF07 /* AppDelegate.swift */; };
 		1FCE9596271823CB00C8EF07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9595271823CB00C8EF07 /* SceneDelegate.swift */; };
 		1FCE9598271823CB00C8EF07 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE9597271823CB00C8EF07 /* AuthViewController.swift */; };
@@ -73,6 +74,7 @@
 		1F9E2987271C8DD900EC0AE8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1FB504842731399B00716250 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		1FB5048627318BA400716250 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
+		1FB504882732C69900716250 /* WaitingChatsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigation.swift; sourceTree = "<group>"; };
 		1FCE9590271823CB00C8EF07 /* driverMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = driverMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCE9593271823CB00C8EF07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCE9595271823CB00C8EF07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,8 +191,8 @@
 				1F9D57CF2725692B0063B557 /* Services */,
 				1F9E2989271C977100EC0AE8 /* SignIn&Auth */,
 				1FD781DD271ECAE800C7C78C /* Controllers */,
-				1FCE95B3271864EA00C8EF07 /* Extensions */,
 				1FD781EF27207DC000C7C78C /* Protocols */,
+				1FCE95B3271864EA00C8EF07 /* Extensions */,
 				1F9D57D627258DFE0063B557 /* Helpers */,
 				1FCE959C271823D000C8EF07 /* Assets.xcassets */,
 				1FCE959E271823D000C8EF07 /* LaunchScreen.storyboard */,
@@ -264,6 +266,7 @@
 			children = (
 				1FD781F027207E8600C7C78C /* SelfConfiguringCell.swift */,
 				1F9D57D72725A0550063B557 /* AuthNavigatingDelegate.swift */,
+				1FB504882732C69900716250 /* WaitingChatsNavigation.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				1FD781FA27219A9800C7C78C /* MChat.swift in Sources */,
 				1F9D57D1272569780063B557 /* AuthService.swift in Sources */,
 				1FCE9596271823CB00C8EF07 /* SceneDelegate.swift in Sources */,
+				1FB504892732C69900716250 /* WaitingChatsNavigation.swift in Sources */,
 				1F9E2986271B377400EC0AE8 /* UISegmentedControll + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

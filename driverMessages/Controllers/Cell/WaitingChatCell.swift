@@ -6,13 +6,9 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WaitingChatCell: UICollectionViewCell, SelfConfiguringCell {
-    func configure<U>(with value: U) where U : Hashable {
-        guard let chat: MChat = value as? MChat else { return }
-//        friendImageView.image = UIImage(named: chat.userImageString)
-        
-    }
     
     static var reuseId: String = "WaitingChatCell"
     
@@ -27,9 +23,11 @@ class WaitingChatCell: UICollectionViewCell, SelfConfiguringCell {
         self.clipsToBounds = true
         setupConstraints()
     }
-    
-    func configure(with value: MChat) {
-//        friendImageView.image = UIImage(named: value.userImageString)
+    func configure<U>(with value: U) where U : Hashable {
+        guard let chat: MChat = value as? MChat else { return }
+        friendImageView.sd_setImage(with: URL(string: chat.friendAvatarStringURL), completed: nil)
+        //        friendImageView.image = UIImage(named: chat.userImageString)
+        
     }
     
     private func setupConstraints() {
