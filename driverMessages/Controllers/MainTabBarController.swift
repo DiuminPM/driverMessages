@@ -25,15 +25,18 @@ class MainTabBarController: UITabBarController {
         
         let listViewController = ListViewController(currentUser: currentUser)
         let peopleViewController = PeopleViewController(currentUser: currentUser)
+        let mapVC = MapViewController()
         
         tabBar.tintColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         let boldConfig = UIImage.SymbolConfiguration(weight: .medium)
         let convImage = UIImage(systemName: "bubble.left.and.bubble.right", withConfiguration: boldConfig)!
         let peopleImage = UIImage(systemName: "person.2", withConfiguration: boldConfig)!
+        let mapImage = UIImage(systemName: "map.fill", withConfiguration: boldConfig)!
         
         viewControllers = [
             generateNavigationViewController(rootViewController: peopleViewController, title: "People", image: peopleImage ),
-            generateNavigationViewController(rootViewController: listViewController, title: "Conversation", image: convImage)
+            generateNavigationViewController(rootViewController: listViewController, title: "Conversation", image: convImage),
+            generateNavigationViewController(rootViewController: mapVC, title: "Map", image: mapImage)
         ]
     }
     

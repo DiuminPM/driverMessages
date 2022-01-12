@@ -37,6 +37,7 @@ class ChatsViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureMessageInputBar()
+        configureCameraIcon()
         
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
             layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
@@ -111,7 +112,21 @@ class ChatsViewController: MessagesViewController {
         messageInputBar.middleContentViewPadding.right = -38
     }
     
+    func configureCameraIcon() {
+        let cameraItem = InputBarButtonItem(type: .system)
+        let cameraImage = UIImage(systemName: "camera")!
+        cameraItem.addTarget(self, action: #selector(cameraButtonPressed), for: .primaryActionTriggered)
+        cameraItem.setSize(CGSize(width: 60, height: 30), animated: false)
+        cameraItem.image = cameraImage
+        
+        messageInputBar.leftStackView.alignment = .center
+        messageInputBar.setLeftStackViewWidthConstant(to: 50, animated: false)
+        messageInputBar.setStackViewItems([cameraItem], forStack: .left, animated: false)
+    }
     
+    @objc private func cameraButtonPressed() {
+        print(#function)
+    }
 }
 
 extension ChatsViewController: MessagesDataSource {

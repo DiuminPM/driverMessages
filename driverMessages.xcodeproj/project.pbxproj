@@ -10,6 +10,7 @@
 		1F0293A32719D69300F739AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0293A22719D69300F739AC /* LoginViewController.swift */; };
 		1F0293A5271B100F00F739AC /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0293A4271B100F00F739AC /* SetupProfileViewController.swift */; };
 		1F0293A7271B15E500F739AC /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0293A6271B15E500F739AC /* AddPhotoView.swift */; };
+		1F180254274A6165002F13AB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F180253274A6165002F13AB /* MapViewController.swift */; };
 		1F9D57D1272569780063B557 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D0272569780063B557 /* AuthService.swift */; };
 		1F9D57D327257A8A0063B557 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D227257A8A0063B557 /* Validators.swift */; };
 		1F9D57D5272581FE0063B557 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D4272581FE0063B557 /* AuthError.swift */; };
@@ -67,6 +68,7 @@
 		1F0293A22719D69300F739AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F0293A4271B100F00F739AC /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		1F0293A6271B15E500F739AC /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		1F180253274A6165002F13AB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1F78C912A0EEC4ADE8AF5016 /* Pods-driverMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.release.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.release.xcconfig"; sourceTree = "<group>"; };
 		1F9D57D0272569780063B557 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1F9D57D227257A8A0063B557 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				1FD782022722DE9600C7C78C /* ProfileViewController.swift */,
 				1FD7820A27230E1300C7C78C /* ChatRequestViewController.swift */,
 				1FB5048A2732EDE700716250 /* ChatsViewController.swift */,
+				1F180253274A6165002F13AB /* MapViewController.swift */,
 				1FD781F627217C5100C7C78C /* Header */,
 				1FD781E827205BEB00C7C78C /* Cell */,
 			);
@@ -460,6 +463,7 @@
 				1FB5048B2732EDE700716250 /* ChatsViewController.swift in Sources */,
 				1FCE95AE27185C4100C8EF07 /* UILabel + Extension.swift in Sources */,
 				1FFE5DF82726F162009E6C9F /* FireStoreService.swift in Sources */,
+				1F180254274A6165002F13AB /* MapViewController.swift in Sources */,
 				1FFE5DFE27303997009E6C9F /* StorageService.swift in Sources */,
 				1FCE95B127185E9D00C8EF07 /* UIImageView + Extension.swift in Sources */,
 				1FD781F127207E8600C7C78C /* SelfConfiguringCell.swift in Sources */,
