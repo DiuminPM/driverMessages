@@ -61,7 +61,7 @@
 		1FFE5DFC272C5C63009E6C9F /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DFB272C5C63009E6C9F /* UIApplication + Extension.swift */; };
 		1FFE5DFE27303997009E6C9F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DFD27303997009E6C9F /* StorageService.swift */; };
 		1FFE5E0027303EFF009E6C9F /* UIImage + extrnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE5DFF27303EFF009E6C9F /* UIImage + extrnsion.swift */; };
-		8172263035FE2540AC0E3DF8 /* Pods_driverMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6059CC09C17CDF2F37E48217 /* Pods_driverMessages.framework */; };
+		E9ACB051D799FF64280F8F6A /* Pods_driverMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF6E6E99044FB7139D17BA1 /* Pods_driverMessages.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +69,6 @@
 		1F0293A4271B100F00F739AC /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		1F0293A6271B15E500F739AC /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		1F180253274A6165002F13AB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		1F78C912A0EEC4ADE8AF5016 /* Pods-driverMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.release.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.release.xcconfig"; sourceTree = "<group>"; };
 		1F9D57D0272569780063B557 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1F9D57D227257A8A0063B557 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		1F9D57D4272581FE0063B557 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -122,8 +121,9 @@
 		1FFE5DFB272C5C63009E6C9F /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
 		1FFE5DFD27303997009E6C9F /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		1FFE5DFF27303EFF009E6C9F /* UIImage + extrnsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + extrnsion.swift"; sourceTree = "<group>"; };
-		6059CC09C17CDF2F37E48217 /* Pods_driverMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_driverMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5BE0A4ADE946BC713829050 /* Pods-driverMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.debug.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.debug.xcconfig"; sourceTree = "<group>"; };
+		680357D845C2D1A1C65FAD15 /* Pods-driverMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.debug.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.debug.xcconfig"; sourceTree = "<group>"; };
+		ACB4877CC60C51085790BE97 /* Pods-driverMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driverMessages.release.xcconfig"; path = "Target Support Files/Pods-driverMessages/Pods-driverMessages.release.xcconfig"; sourceTree = "<group>"; };
+		CBF6E6E99044FB7139D17BA1 /* Pods_driverMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_driverMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8172263035FE2540AC0E3DF8 /* Pods_driverMessages.framework in Frameworks */,
+				E9ACB051D799FF64280F8F6A /* Pods_driverMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +177,7 @@
 				1FCE9592271823CB00C8EF07 /* driverMessages */,
 				1FCE9591271823CB00C8EF07 /* Products */,
 				BB5851264FAB80BEA0D9CD14 /* Pods */,
-				F8344837A5FA305BDCFC0395 /* Frameworks */,
+				94364F98603A4CBB8B16C101 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,21 +298,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		94364F98603A4CBB8B16C101 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6E6E99044FB7139D17BA1 /* Pods_driverMessages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB5851264FAB80BEA0D9CD14 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C5BE0A4ADE946BC713829050 /* Pods-driverMessages.debug.xcconfig */,
-				1F78C912A0EEC4ADE8AF5016 /* Pods-driverMessages.release.xcconfig */,
+				680357D845C2D1A1C65FAD15 /* Pods-driverMessages.debug.xcconfig */,
+				ACB4877CC60C51085790BE97 /* Pods-driverMessages.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		F8344837A5FA305BDCFC0395 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6059CC09C17CDF2F37E48217 /* Pods_driverMessages.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,11 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FCE95A4271823D000C8EF07 /* Build configuration list for PBXNativeTarget "driverMessages" */;
 			buildPhases = (
-				E8CC00208DE0EDF891B13B37 /* [CP] Check Pods Manifest.lock */,
+				E8171DD7CCD5A419786A6706 /* [CP] Check Pods Manifest.lock */,
 				1FCE958C271823CB00C8EF07 /* Sources */,
 				1FCE958D271823CB00C8EF07 /* Frameworks */,
 				1FCE958E271823CB00C8EF07 /* Resources */,
-				4FA884DBAF1080A822FCE5F1 /* [CP] Embed Pods Frameworks */,
+				9283DD665EFCFAD1C0F162A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,7 +386,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4FA884DBAF1080A822FCE5F1 /* [CP] Embed Pods Frameworks */ = {
+		9283DD665EFCFAD1C0F162A5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,7 +403,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-driverMessages/Pods-driverMessages-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8CC00208DE0EDF891B13B37 /* [CP] Check Pods Manifest.lock */ = {
+		E8171DD7CCD5A419786A6706 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -615,7 +615,7 @@
 		};
 		1FCE95A5271823D000C8EF07 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5BE0A4ADE946BC713829050 /* Pods-driverMessages.debug.xcconfig */;
+			baseConfigurationReference = 680357D845C2D1A1C65FAD15 /* Pods-driverMessages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -636,7 +636,7 @@
 		};
 		1FCE95A6271823D000C8EF07 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F78C912A0EEC4ADE8AF5016 /* Pods-driverMessages.release.xcconfig */;
+			baseConfigurationReference = ACB4877CC60C51085790BE97 /* Pods-driverMessages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
