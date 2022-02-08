@@ -34,9 +34,9 @@ class MainTabBarController: UITabBarController {
         let mapImage = UIImage(systemName: "map.fill", withConfiguration: boldConfig)!
         
         viewControllers = [
-            generateNavigationViewController(rootViewController: peopleViewController, title: "People", image: peopleImage ),
+            generateNavigationViewController(rootViewController: mapVC, title: "Map", image: mapImage),
             generateNavigationViewController(rootViewController: listViewController, title: "Conversation", image: convImage),
-            generateNavigationViewController(rootViewController: mapVC, title: "Map", image: mapImage)
+            generateNavigationViewController(rootViewController: peopleViewController, title: "Fauvorite", image: peopleImage )
         ]
     }
     
