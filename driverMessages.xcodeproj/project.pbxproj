@@ -11,6 +11,7 @@
 		1F0293A5271B100F00F739AC /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0293A4271B100F00F739AC /* SetupProfileViewController.swift */; };
 		1F0293A7271B15E500F739AC /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0293A6271B15E500F739AC /* AddPhotoView.swift */; };
 		1F180254274A6165002F13AB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F180253274A6165002F13AB /* MapViewController.swift */; };
+		1F958E3F27B3EC7F000E7666 /* SliderFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F958E3E27B3EC7F000E7666 /* SliderFormView.swift */; };
 		1F9D57D1272569780063B557 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D0272569780063B557 /* AuthService.swift */; };
 		1F9D57D327257A8A0063B557 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D227257A8A0063B557 /* Validators.swift */; };
 		1F9D57D5272581FE0063B557 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D57D4272581FE0063B557 /* AuthError.swift */; };
@@ -69,6 +70,7 @@
 		1F0293A4271B100F00F739AC /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		1F0293A6271B15E500F739AC /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		1F180253274A6165002F13AB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1F958E3E27B3EC7F000E7666 /* SliderFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderFormView.swift; sourceTree = "<group>"; };
 		1F9D57D0272569780063B557 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1F9D57D227257A8A0063B557 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		1F9D57D4272581FE0063B557 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				1F0293A6271B15E500F739AC /* AddPhotoView.swift */,
 				1FD781E627204DCE00C7C78C /* Bundle-Decodable.swift */,
 				1FD781EB2720771200C7C78C /* GradientView.swift */,
+				1F958E3E27B3EC7F000E7666 /* SliderFormView.swift */,
 				1FCE95B2271864D800C8EF07 /* UIKit */,
 			);
 			path = Extensions;
@@ -470,6 +473,7 @@
 				1FB5048D2733124D00716250 /* SenderType.swift in Sources */,
 				1F9D57D82725A0550063B557 /* AuthNavigatingDelegate.swift in Sources */,
 				1FD782012721B99200C7C78C /* UIViewController + Extension.swift in Sources */,
+				1F958E3F27B3EC7F000E7666 /* SliderFormView.swift in Sources */,
 				1FD781EE27207BD200C7C78C /* WaitingChatCell.swift in Sources */,
 				1FCE95AC271858CE00C8EF07 /* UIColor + Extension.swift in Sources */,
 				1FCE9594271823CB00C8EF07 /* AppDelegate.swift in Sources */,
